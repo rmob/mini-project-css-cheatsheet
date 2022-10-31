@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #005577;
+    font-size: 16px;
+    font-family: 'Arial', Helvetica, sans-serif;
+    padding: 25px 0;
+    color: hotpink;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 15px;
+    letter-spacing: -.05em;
+    
+}
+
+header p {
+    color: white;
+    margin: 0px 400px 40px 400px;
+    min-width: 900px;
+    max-width: 900px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    row-gap: 40px;
+    column-gap: 25px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 25px;
+   
+   
+    
+}
+
+.code-card {
+    border: 1px dashed #fff;
+    width: 350px;
+    padding: 0;
+    
+}
+
+.code-card p {
+    margin: 10px;
+    font-size: 14px;
+    
+}
+
+.card-header {
+    border: 2px solid white;
+    border-radius: 8px;
+    margin: auto 10px;
+    position: relative;
+    margin-top: -20px;
+    background-color: #005577;
+    padding-left: 5px;
+}
+
+.snippet {
+    display: flex;
+    flex-basis: 100%;
+    width: 90%;
+    margin-left: 17px;
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    border-radius: 4px;
+    white-space: pre-wrap;
+    user-select: all;
+    padding: 1.5%;
+    color: white;
+    font-family: monospace;
+}
+
+/*Animation*/
+
+.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+}
+
+
+
+footer {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* -- Basic formulas given by example ------------*/
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/*----------------------------------------------*/
+
+
+@media screen and (max-width: 992px) {
+    .main {
+       max-width: 100%;
+    }
+
+    header p {
+        min-width: 700px;
+    }
+ 
+}
+
+@media screen and (max-width: 768px) {
+
+    header h1 {
+        padding: 0 125px;
+    }
+
+    header p {
+        min-width: 400px;
+        max-width: 100%;
+    }
+   .code-card {
+    width: 100%;
+   }
+
+}
